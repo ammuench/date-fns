@@ -190,6 +190,8 @@ function getPreprocessorsConfig () {
 function getBrowsersConfig () {
   if (process.env.TEST_CROSS_BROWSER) {
     return Object.keys(sauceLabsLaunchers)
+  } else if (process.env.USE_HEADLESS){
+    return ['ChromeHeadless']
   } else if (process.env.TEST_BENCHMARK) {
     return ['PhantomJS']
   } else if (process.env.TRAVIS) {

@@ -17,6 +17,7 @@
   "module": "esm/index.js",
   "scripts": {
     "test": "karma start config/karma.js",
+    "test:headless": "env USE_HEADLESS=true karma start config/karma.js",
     "lint": "standard --verbose | snazzy",
     "benchmark": "env TEST_BENCHMARK=true yarn test -- --single-run",
     "stats": "cloc . --exclude-dir=node_modules,tmp,.git"
