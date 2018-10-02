@@ -2,11 +2,11 @@
 /* eslint-env mocha */
 /* global suite, benchmark */
 
-import mapMonthToNumeric from '.'
+import monthStringToNumber from '.'
 
-suite('mapMonthToNumeric', function () {
+suite('monthStringToNumber', function () {
   benchmark('date-fns', function () {
-    return mapMonthToNumeric(this.monthName)
+    return monthStringToNumber(this.monthName)
   })
 }, {
   setup: function () {
